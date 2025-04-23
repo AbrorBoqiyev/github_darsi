@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <title>Staff</title>
+{% endblock  %}
+
+{% block content %}
+    <div class="d-flex justify-content-around align-items-center">
+        <h1>Staff</h1>
+        <button><a href="{% url 'create' %}">Create</a></button>
+    </div>
+    <div class="staffs row m-5">
+        {% for i in staff%}
+            <div class="cards col-4 border">
+                <h3> <a href="{% url 'view-staff' i.pk %}">{{i.name}}</a></h3>
+                <p> <em>age: </em>{{i.age}} </p>
+                <p> <em>Phone:</em> {{i.phone}}                                                                                                                                                                                                                                                                                                                                        
+            </div>
+        {% endfor %}
+    </div>
+{% endblock  %}

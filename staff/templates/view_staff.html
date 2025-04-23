@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Staff-view</title>
+{% endblock  %}
+
+{%block content%}
+    <div class="container">
+        <h3>{{item.name}} {{item.surname}}</h3>
+        <p>age: {{item.age}}</p>
+        <p>phone: {{item.phone}}</p>
+        <p>email: {{item.email}}</p>
+        <button><a href="{% url 'staff_list' %}">Back</a></button>
+        <button><a href="{% url 'update-staff' item.pk %}">Update</a></button>
+        <button onclick="return confirm('Rostdan ham o\'chirmoqchimisiz?! ')"><a href="{% url 'delete-staff' item.pk %}">Delete</a></button>
+    </div>
+{% endblock %}

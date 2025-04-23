@@ -1,0 +1,23 @@
+body{
+    background-color: whitesmoke;
+}
+
+h1{
+    color: blue;
+}
+.main{
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    width: 90%;
+}
+.card{
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px #333;
+    padding: 15px;
+    transition: 0.4s;
+}
+.card:hover{
+    transform: scale(1.1);
+}
